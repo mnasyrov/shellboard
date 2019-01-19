@@ -186,3 +186,8 @@ Development scripts:
 Build scripts: 
 * `yarn build` – compiles sources.
 * `yarn dist` – makes an app bundle in `/dist` directory.
+
+
+## License
+
+[MIT](LICENSE)
