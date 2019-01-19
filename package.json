@@ -1,7 +1,7 @@
 {
   "name": "shellboard",
   "description": "ShellBoard - a simple web server to execute shell commands",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Mikhail Nasyrov",
   "license": "MIT",
   "bin": {
