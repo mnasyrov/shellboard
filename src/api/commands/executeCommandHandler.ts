@@ -9,6 +9,9 @@ export interface ExecuteCommandResponseBody {
     stderr: string | undefined;
 }
 
+/**
+ * Creates a request handler for shell command execution.
+ */
 export function executeCommandHandler(storage: Storage, shellExecutor: ShellExecutor): RequestHandler {
     return async (request, response, next) => {
         const index: number = parseInt(request.params.index, 10);

@@ -1,6 +1,6 @@
 import {ShellExecutor} from './shellExecutor';
 
-describe('ShellExecutor #itest', () => {
+describe('ShellExecutor #slow', () => {
     const shellExecutor = new ShellExecutor();
 
     describe('method execute()', () => {

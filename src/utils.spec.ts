@@ -2,7 +2,7 @@ import {AppEnvironment} from './common/appEnvironment';
 import {DEFAULT_CONFIG_FILE_PATH, DEFAULT_HOSTNAME, DEFAULT_HTTP_LOG_FORMAT, DEFAULT_PORT} from './constants';
 import {parseEnvironmentVariables, readShellConfigFile} from './utils';
 
-describe('function readShellConfigFile() #itest', () => {
+describe('function readShellConfigFile() #slow', () => {
     it('should read a configuration file', async () => {
         const file = 'shellboard-example.json';
         const config = await readShellConfigFile(file);

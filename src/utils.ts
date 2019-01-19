@@ -40,5 +40,14 @@ export function parseEnvironmentVariables(
         return {validationError: 'Environment error: BASIC_AUTH_PASSWORD is missed.'};
     }
 
-    return {env: {hostname, port, configFilePath, basicAuthUsername, basicAuthPassword, httpLogFormat}};
+    return {
+        env: {
+            hostname,
+            port,
+            configFilePath,
+            basicAuthUsername,
+            basicAuthPassword,
+            httpLogFormat
+        }
+    };
 }

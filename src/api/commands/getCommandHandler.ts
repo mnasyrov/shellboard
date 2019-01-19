@@ -5,6 +5,9 @@ export interface GetCommandResponseBody {
     command: string;
 }
 
+/**
+ * Creates a request handler for fetching a shell command.
+ */
 export function getCommandHandler(storage: Storage): RequestHandler {
     return (request, response) => {
         const index: number = parseInt(request.params.index, 10);

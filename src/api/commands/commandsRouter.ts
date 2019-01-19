@@ -5,7 +5,10 @@ import {executeCommandHandler} from './executeCommandHandler';
 import {getCommandHandler} from './getCommandHandler';
 import {listCommandsHandler} from './listCommandsHandler';
 
-export function createCommandsRouter(storage: Storage, shellExecutor: ShellExecutor) {
+/**
+ * Creates a router for "commands" resource.
+ */
+export function createCommandsRouter(storage: Storage, shellExecutor: ShellExecutor): Router {
     const router = Router();
     router.get('/', listCommandsHandler(storage));
     router.get('/:index', getCommandHandler(storage));

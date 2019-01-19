@@ -5,6 +5,9 @@ export interface ListCommandsResponseBody {
     commands: ReadonlyArray<string>;
 }
 
+/**
+ * Creates a request handler for listing shell commands.
+ */
 export function listCommandsHandler(storage: Storage): RequestHandler {
     return (request, response) => {
         const commands = storage.getShellCommands();
