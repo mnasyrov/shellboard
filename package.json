@@ -1,6 +1,6 @@
 {
   "name": "shellboard",
-  "description": "ShellBoard - a simple web dashboard to execute shell commands",
+  "description": "ShellBoard - a simple web server to execute shell commands",
   "version": "0.0.1",
   "author": "Mikhail Nasyrov",
   "license": "MIT",
@@ -8,7 +8,9 @@
     "shellboard": "dist/shellboard.js"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "/.env.defaults",
+    "/shellboard-example.json"
   ],
   "dependencies": {
     "dotenv": "6.2.0",
@@ -45,10 +47,10 @@
     "clean": "rm -rf build dist",
     "lint": "tslint \"src/**/*.ts\"",
     "format": "prettier --write \"{src,test}/**/*.ts\"",
-    "build": "tsc",
     "test": "yarn jest",
     "test-fast": "jest --testNamePattern='^((?!#slow).)*$'",
     "test-slow": "jest --testNamePattern='#slow'",
+    "build": "tsc",
     "dist": "rollup --config",
     "dist-build": "yarn build && yarn dist",
     "--  Helpers  --": "",
