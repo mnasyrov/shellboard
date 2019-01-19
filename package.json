@@ -50,10 +50,11 @@
     "test-fast": "jest --testNamePattern='^((?!#slow).)*$'",
     "test-slow": "jest --testNamePattern='#slow'",
     "dist": "rollup --config",
+    "dist-build": "yarn build && yarn dist",
     "--  Helpers  --": "",
     "check-format": "prettier --list-different \"{src,test}/**/*.ts\"",
     "check-commit": "yarn lint && yarn check-format && yarn build && yarn test && yarn dist",
-    "check-publish": "npm publish --dry-run",
+    "check-publish": "test -e dist/shellboard.js && npm publish --dry-run",
     "do-publish": "npm publish --access public"
   }
 }
