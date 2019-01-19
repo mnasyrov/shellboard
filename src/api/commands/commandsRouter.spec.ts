@@ -48,7 +48,7 @@ describe('API "commands" router', () => {
     describe('POST /:index', () => {
         it('should return a result of command execution', async () => {
             const testbed = createTestbed();
-            const response = await supertest(testbed).post('/0/execute');
+            const response = await supertest(testbed).post('/0');
             expect(response.status).toBe(200);
             expect(response.body).toEqual({
                 command: 'echo foo',
@@ -60,13 +60,13 @@ describe('API "commands" router', () => {
 
         it('should return 400 status in case the index cannot be parsed', async () => {
             const testbed = createTestbed();
-            const response = await supertest(testbed).post('/text-value/execute');
+            const response = await supertest(testbed).post('/text-value');
             expect(response.status).toBe(400);
         });
 
         it('should return 404 status  in case an item is not found', async () => {
             const testbed = createTestbed();
-            const response = await supertest(testbed).post('/100/execute');
+            const response = await supertest(testbed).post('/100');
             expect(response.status).toBe(404);
         });
     });
