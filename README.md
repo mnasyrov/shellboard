@@ -185,6 +185,14 @@ Build scripts:
 * `yarn build` – compiles sources.
 * `yarn dist` – makes an app bundle in `/dist` directory.
 
+Publish to NPM (for maintainers):
+
+```bash
+yarn check-commit
+yarn clean && yarn dist-build
+yarn check-publish
+npm run do-publish --otp=<CODE>
+```
 
 ## License
 
