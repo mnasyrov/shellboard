@@ -4,4 +4,5 @@ export interface AppEnvironment {
     configFilePath: string;
     basicAuthUsername: string | undefined;
     basicAuthPassword: string | undefined;
+    httpLogFormat: string;
 }

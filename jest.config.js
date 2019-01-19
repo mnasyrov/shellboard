@@ -4,7 +4,7 @@
 
 module.exports = {
     preset: 'ts-jest',
-    coverageDirectory: 'build/coverage',
+    coverageDirectory: 'build/test-coverage',
     roots: [
         '<rootDir>/src'
     ],

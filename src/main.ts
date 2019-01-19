@@ -14,18 +14,18 @@ import {parseEnvironmentVariables, readShellConfigFile} from './utils';
 dotenv.config();
 start();
 
-function start() {
+async function start() {
     // Get the app configuration
-    const {env, envValidationError} = parseEnvironmentVariables(process.env);
+    const {env, validationError} = parseEnvironmentVariables(process.env);
     if (!env) {
-        console.error(envValidationError);
+        console.error(validationError);
         return process.exit(1);
     }
 
     // Read configuration of shell scripts
     let shellBoardConfig: ShellBoardConfig;
     try {
-        shellBoardConfig = readShellConfigFile(env.configFilePath);
+        shellBoardConfig = await readShellConfigFile(env.configFilePath);
     } catch (error) {
         console.error(`Failed to read or parse a config file: ${error}`);
         return process.exit(1);
@@ -48,6 +48,7 @@ function start() {
     const app = createApplication({
         authFilter,
         apiRouter,
+        httpLogFormat: env.httpLogFormat,
         publicDir: PUBLIC_DIR
     });
 

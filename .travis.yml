@@ -8,4 +8,5 @@ install:
 script:
   - yarn clean
   - yarn check-commit
+  - yarn test-all
   - yarn check-publish

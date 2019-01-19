@@ -1,6 +1,9 @@
 import {exec} from 'child_process';
 import {ShellExecutionResult} from './shellExecutionResult';
 
+/**
+ * Executor of shell commands.
+ */
 export class ShellExecutor {
     async execute(command: string): Promise<ShellExecutionResult> {
         return new Promise<ShellExecutionResult>(resolve => {
@@ -9,7 +12,7 @@ export class ShellExecutor {
                     resolve({command, exitStatus: error.code, stdout, stderr});
                     return;
                 }
-                resolve({command, stdout, stderr});
+                resolve({command, stdout, stderr, exitStatus: 0});
             });
         });
     }
