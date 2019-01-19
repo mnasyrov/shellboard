@@ -5,12 +5,15 @@
   "author": "Mikhail Nasyrov",
   "license": "MIT",
   "bin": {
-    "shellboard": "dist/shellboard.js"
+    "shellboard": "bin/shellboard-cli.js"
   },
   "files": [
+    "/bin",
     "/dist",
     "/.env.defaults",
-    "/shellboard-example.json"
+    "/shellboard-example.json",
+    "README.md",
+    "LICENSE"
   ],
   "dependencies": {
     "dotenv": "6.2.0",
