@@ -1,0 +1,23 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Build output
+/build
+/dist
+
+# Dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+/.vscode
+
+# Misc
+.env
+.shellboard.json
+npm-debug.log
+testem.log
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db

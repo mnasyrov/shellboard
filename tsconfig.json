@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./build/js",
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "lib": [
+      "es6"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}

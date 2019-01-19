@@ -1,0 +1,51 @@
+{
+  "name": "shellboard",
+  "description": "ShellBoard - a simple web dashboard to execute shell commands",
+  "version": "0.0.1",
+  "author": "Mikhail Nasyrov",
+  "license": "MIT",
+  "bin": {
+    "shellboard": "dist/shellboard.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "passport": "0.4.0",
+    "passport-http": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "6.1.0",
+    "@types/express": "4.16.0",
+    "@types/jest": "23.3.12",
+    "@types/passport": "1.0.0",
+    "@types/passport-http": "0.3.7",
+    "jest": "23.6.0",
+    "prettier": "1.15.3",
+    "rollup": "1.1.0",
+    "rollup-plugin-typescript": "1.0.0",
+    "ts-jest": "23.10.5",
+    "ts-node": "7.0.1",
+    "ts-node-dev": "1.0.0-pre.32",
+    "tslint": "5.12.1",
+    "tslint-config-prettier": "1.17.0",
+    "typescript": "3.2.4",
+    "wsrun": "3.6.2"
+  },
+  "scripts": {
+    "start": "ts-node-dev --respawn --no-notify --project tsconfig-dev.json src/main.ts",
+    "clean": "rm -rf build dist",
+    "lint": "tslint \"src/**/*.ts\"",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "build": "tsc",
+    "test": "jest",
+    "dist": "rollup --config",
+    "--  Helpers  --": "",
+    "check-format": "prettier --list-different \"{src,test}/**/*.ts\"",
+    "check-commit": "yarn lint && yarn check-format && yarn build && yarn test && yarn dist",
+    "check-publish": "npm publish --dry-run",
+    "do-publish": "npm publish --access public"
+  }
+}
