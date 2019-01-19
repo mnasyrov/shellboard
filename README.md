@@ -1,7 +1,5 @@
 # ShellBoard
 
-Simple web dashboard to execute shell commands.
-
 [![npm version](https://badge.fury.io/js/shellboard.svg)](https://www.npmjs.com/shellboard)
 [![build Status](https://travis-ci.org/mnasyrov/shellboard.svg?branch=master)](https://travis-ci.org/mnasyrov/shellboard)
 
