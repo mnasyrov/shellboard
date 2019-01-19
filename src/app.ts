@@ -6,7 +6,6 @@ export interface ApplicationOptions {
     authFilter?: RequestHandler;
     apiRouter: Router;
     httpLogFormat: string;
-    publicDir: string;
 }
 
 export function createApplication(options: ApplicationOptions): Application {
@@ -20,6 +19,5 @@ export function createApplication(options: ApplicationOptions): Application {
     }
 
     app.use('/api', options.apiRouter);
-    app.use('/', express.static(options.publicDir));
     return app;
 }

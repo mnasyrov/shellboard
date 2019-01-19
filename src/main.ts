@@ -6,7 +6,7 @@ import {createCommandsRouter} from './api/commands/commandsRouter';
 import {createApplication} from './app';
 import {createAuthFilter, createBasicAuthStrategy} from './auth';
 import {ShellBoardConfig} from './common/shellBoardConfig';
-import {APP_NAME, PUBLIC_DIR} from './constants';
+import {APP_NAME} from './constants';
 import {ShellExecutor} from './shell/shellExecutor';
 import {DummyStorage} from './storages/dummyStorage';
 import {parseEnvironmentVariables, readShellConfigFile} from './utils';
@@ -48,8 +48,7 @@ async function start() {
     const app = createApplication({
         authFilter,
         apiRouter,
-        httpLogFormat: env.httpLogFormat,
-        publicDir: PUBLIC_DIR
+        httpLogFormat: env.httpLogFormat
     });
 
     // Start the server

@@ -49,7 +49,7 @@
     "dist": "rollup --config",
     "--  Helpers  --": "",
     "check-format": "prettier --list-different \"{src,test}/**/*.ts\"",
-    "check-commit": "yarn lint && yarn check-format && yarn build && yarn test && yarn dist",
+    "check-commit": "yarn lint && yarn check-format && yarn build && yarn test-all && yarn dist",
     "check-publish": "npm publish --dry-run",
     "do-publish": "npm publish --access public"
   }
