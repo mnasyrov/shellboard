@@ -9,9 +9,11 @@
     "module": "es6",
     "moduleResolution": "node",
     "lib": [
-      "es6"
+      "es6",
+      "dom"
     ],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "importHelpers": true
   }
 }
