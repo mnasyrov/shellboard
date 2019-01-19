@@ -12,6 +12,6 @@ export function createCommandsRouter(storage: Storage, shellExecutor: ShellExecu
     const router = Router();
     router.get('/', listCommandsHandler(storage));
     router.get('/:index', getCommandHandler(storage));
-    router.post('/:index/execute', executeCommandHandler(storage, shellExecutor));
+    router.post('/:index', executeCommandHandler(storage, shellExecutor));
     return router;
 }

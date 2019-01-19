@@ -45,7 +45,7 @@ describe('API "commands" router', () => {
         });
     });
 
-    describe('POST /:index/execute', () => {
+    describe('POST /:index', () => {
         it('should return a result of command execution', async () => {
             const testbed = createTestbed();
             const response = await supertest(testbed).post('/0/execute');
