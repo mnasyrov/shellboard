@@ -6,7 +6,7 @@
 
 ## What is it?
 
-ShellBoard is a tiny web server which provides REST API to execute shell commands. The commands are configured statically and not editable outside. 
+ShellBoard is a simple web server with REST API to execute shell commands for quick monitor or dev automation. The commands are configured statically and not editable outside. 
 
 
 ## Why?
