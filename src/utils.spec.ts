@@ -7,7 +7,7 @@ describe('function readShellConfigFile() #slow', () => {
         const file = 'shellboard-example.json';
         const config = await readShellConfigFile(file);
         expect(config).toBeDefined();
-        expect(config.commands).toEqual(['ls', 'free -h', 'df -u .']);
+        expect(config.commands).toEqual(['echo Hello World!', 'date']);
     });
 
     it('should throw an error in case a file cannot be read', async () => {
