@@ -34,8 +34,8 @@ async function start() {
 
     // Initialize components
     let authFilter: RequestHandler | undefined;
-    if (env.basicAuthUsername && env.basicAuthPassword) {
-        const authStrategy = createBasicAuthStrategy(env.basicAuthUsername, env.basicAuthPassword);
+    if (env.basicAuth) {
+        const authStrategy = createBasicAuthStrategy(env.basicAuth.username, env.basicAuth.password);
         passport.use(authStrategy);
         authFilter = createAuthFilter();
     }
@@ -52,9 +52,9 @@ async function start() {
     });
 
     // Start the server
-    app.listen(env.port, env.hostname, () => {
+    app.listen(env.serverPort, env.serverHost, () => {
         const mode = app.get('env');
-        console.log(`${APP_NAME} is running at http://${env.hostname}:${env.port} in ${mode} mode...`);
+        console.log(`${APP_NAME} is running at http://${env.serverHost}:${env.serverPort} in ${mode} mode...`);
         console.log('Press CTRL-C to stop');
     });
 }

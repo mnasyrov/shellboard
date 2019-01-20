@@ -97,22 +97,17 @@ The tool uses [dotenv](https://www.npmjs.com/package/dotenv) library to optional
 
 Variables and default values:
 
-* `SHELLBOARD_CONFIG` – default value: `shellboard.json`
-  A file path to a configuration file, by default the file is searched in working directory.
-*  `SERVER_HOSTNAME` – default value: `localhost`.
-  The server uses it to listen API request. To listen external requests using all network interfaces set it to `0.0.0.0`.
-* `SERVER_PORT` – default value: `3000`
-  Specifies a server port to listen API requests.
-* `HTTP_LOG_FORMAT` – default value: `common`.
-  Defines format to log HTTP requests. Available values: `combined`, `common`, `dev`, `short`, `tiny`. Check documentation of [morgan](https://github.com/expressjs/morgan) library to define custom formats.
-* `BASIC_AUTH_USERNAME` – optional value. 
-* `BASIC_AUTH_PASSWORD` – optional value.
-
-`BASIC_AUTH_USERNAME` and `BASIC_AUTH_PASSWORD` enables Basic Authentication for API endpoints. The both variables must be defined to work.
+* `SHELLBOARD_CONFIG` – A path to a configuration file. Default value: `shellboard.json`.
+* `SERVER_HOST` – Configures HTTP server to listen a specified network interface. Default value: `localhost`.
+  To accept external requests from all network interfaces set it to `0.0.0.0`.
+* `SERVER_PORT` – Configures HTTP server to listen a specified port. Default value: `3000`.
+* `HTTP_LOG_FORMAT` – Defines a log format for HTTP requests. Default value: `common`.
+  Other values: `combined`, `common`, `dev`, `short`, `tiny`. Check documentation of [morgan](https://github.com/expressjs/morgan) library to define custom formats.
+* `BASIC_AUTH` – Enables Basic Authentication for API endpoints if it is specified. Value format: `username:password`.
 
 #### Configuration file
 
-By default ShellBoard searches for `shellboard.json` file in a current working directory. File path can be changed by `SHELLBOARD_CONFIG` environment variable.
+By default ShellBoard looks for `shellboard.json` file in a current working directory. File path can be changed by `SHELLBOARD_CONFIG` environment variable.
 
 This file declares an array of shell commands which will be available via API.
 

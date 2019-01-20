@@ -1,8 +1,7 @@
 export interface AppEnvironment {
-    hostname: string;
-    port: number;
     configFilePath: string;
-    basicAuthUsername: string | undefined;
-    basicAuthPassword: string | undefined;
+    serverHost: string;
+    serverPort: number;
     httpLogFormat: string;
+    basicAuth: {username: string; password: string} | undefined;
 }

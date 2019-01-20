@@ -1,7 +1,6 @@
 {
   "commands": [
-    "ls",
-    "free -h",
-    "df -u ."
+    "echo Hello World!",
+    "date"
   ]
 }
