@@ -2,8 +2,26 @@
   "name": "shellboard",
   "description": "ShellBoard - a simple web server to execute shell commands",
   "version": "0.0.2",
-  "author": "Mikhail Nasyrov",
   "license": "MIT",
+  "author": "Mikhail Nasyrov",
+  "homepage": "https://github.com/mnasyrov/shellboard#readme",
+  "bugs": {
+    "url": "https://github.com/mnasyrov/shellboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnasyrov/shellboard.git"
+  },
+  "keywords": [
+    "nodejs",
+    "cli",
+    "http",
+    "server",
+    "api",
+    "proxy",
+    "shell",
+    "bash"
+  ],
   "bin": {
     "shellboard": "bin/shellboard-cli.js"
   },
@@ -12,8 +30,9 @@
     "/dist",
     "/.env.defaults",
     "/shellboard-example.json",
-    "README.md",
-    "LICENSE"
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
   ],
   "dependencies": {
     "dotenv": "6.2.0",
@@ -36,6 +55,7 @@
     "jest": "23.6.0",
     "prettier": "1.15.3",
     "rollup": "1.1.0",
+    "standard-version": "4.4.0",
     "supertest": "3.4.1",
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
@@ -55,11 +75,12 @@
     "test-slow": "jest --testNamePattern='#slow'",
     "build": "tsc",
     "dist": "rollup --config",
-    "dist-build": "yarn build && yarn dist",
+    "dist-build": "yarn clean && yarn build && yarn dist",
     "--  Helpers  --": "",
     "check-format": "prettier --list-different \"{src,test}/**/*.ts\"",
     "check-commit": "yarn lint && yarn check-format && yarn build && yarn test && yarn dist",
     "check-publish": "test -e dist/shellboard.js && npm publish --dry-run",
-    "do-publish": "npm publish --access public"
+    "check-release": "yarn check-publish && standard-version --dry-run",
+    "release": "standard-version"
   }
 }

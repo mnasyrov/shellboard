@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/shellboard.svg)](https://www.npmjs.com/shellboard)
 [![build Status](https://travis-ci.org/mnasyrov/shellboard.svg?branch=master)](https://travis-ci.org/mnasyrov/shellboard)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 
 ## What is it?
@@ -180,13 +181,16 @@ Build scripts:
 * `yarn build` – compiles sources.
 * `yarn dist` – makes an app bundle in `/dist` directory.
 
-Publish to NPM (for maintainers):
+Release (for maintainers):
 
 ```bash
+git checkout master; git pull origin master
 yarn check-commit
-yarn clean && yarn dist-build
-yarn check-publish
-npm run do-publish --otp=OTP_CODE
+yarn dist-build
+yarn check-release
+yarn release
+git push --follow-tags origin master
+npm publish
 ```
 
 ## License
