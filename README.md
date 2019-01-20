@@ -81,7 +81,7 @@ npm install --save-dev --save-exact shellboard
 # or:  yarn add --dev --exact shellboard
 ```
 
-ShellBoard can be run without intallation using `npx` command of `npm`:
+ShellBoard can be run without installation using `npx` command of `npm`:
 
 ```bash
 npx shellboard
@@ -104,7 +104,7 @@ Variables and default values:
 * `SERVER_PORT` – default value: `3000`
   Specifies a server port to listen API requests.
 * `HTTP_LOG_FORMAT` – default value: `common`.
-  Defines format to log HTTP requests. Available valies: `combined`, `common`, `dev`, `short`, `tiny`. Check documentation of [morgan](https://github.com/expressjs/morgan) library to define custom formats.
+  Defines format to log HTTP requests. Available values: `combined`, `common`, `dev`, `short`, `tiny`. Check documentation of [morgan](https://github.com/expressjs/morgan) library to define custom formats.
 * `BASIC_AUTH_USERNAME` – optional value. 
 * `BASIC_AUTH_PASSWORD` – optional value.
 
@@ -132,7 +132,7 @@ See [shellboard-example.json](shellboard-example.json) as an example.
 ## REST API
 
 ### `GET /api/commands`
-Returns a list of availabled commands.
+Returns a list of available commands.
 
 Response:
 ```json
@@ -179,7 +179,7 @@ Development scripts:
 * `yarn test` – runs unit tests.
 * `yarn check-format` – check formats of source code.
 * `yarn format` – formats source code by [prettier](https://prettier.io/) tool.
-* `yarn check-commit` – runs all nesessary checks, tests and builds to ensure the commit will be green.
+* `yarn check-commit` – runs all necessary checks, tests and builds to ensure the commit will be green.
 
 Build scripts: 
 * `yarn build` – compiles sources.
@@ -191,7 +191,7 @@ Publish to NPM (for maintainers):
 yarn check-commit
 yarn clean && yarn dist-build
 yarn check-publish
-npm run do-publish --otp=<CODE>
+npm run do-publish --otp=OTP_CODE
 ```
 
 ## License
