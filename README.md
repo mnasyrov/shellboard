@@ -28,7 +28,7 @@ ShellBoard covers urgent needs to automate some actions by triggering shell comm
 
 ## Usage
 
-**Disclaimer:** By default, ShellBoard listen requests only from  `localhost`. It is a responsibility of a server administrator to configure the tool properly and use it securely.
+**Disclaimer:** By default, ShellBoard listen requests only from `localhost`. It is a responsibility of a server administrator to configure the tool properly and use it securely.
 
 ### Quick start
 
@@ -74,11 +74,11 @@ ShellBoard can be installed as a global tool:
 npm install --global shellboard
 ```
 
-As a development depencendy of a project:
+As a development dependency of a project:
 
 ```bash
 npm install --save-dev --save-exact shellboard
-# Or:  yarn add --dev --exact shellboard
+# or:  yarn add --dev --exact shellboard
 ```
 
 ShellBoard can be run without intallation using `npx` command of `npm`:
