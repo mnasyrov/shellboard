@@ -11,12 +11,12 @@ ShellBoard is a tiny web server which provides REST API to execute shell command
 
 ## Why?
 
-Sometimes it is need to launch an ad-hoc server:
+Sometimes it is need to have an ad-hoc web server:
 
-* to monitor a system state by shell commands;
-* or to trigger some system actions during developmment or integration testing.
+* for monitoring a system state by shell commands;
+* for triggering system actions during development or integration testing.
 
-ShellBoard covers urgent needs to automate some actions by triggering shell commands.
+ShellBoard covers urgent needs to automate some actions by triggering HTTP API.
 
 
 ## Features
